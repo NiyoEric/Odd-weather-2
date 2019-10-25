@@ -119,6 +119,7 @@ class App extends Component {
       height: "100%"
     };
 
+    console.log('our state', this.state);
     return (
       <div className="grid" style={styles}>
         {searching && <Loader />}
