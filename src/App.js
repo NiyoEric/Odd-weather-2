@@ -10,6 +10,7 @@ import Titles from "./components/Title";
 import imageObject from "./helpers/images";
 import defaultCity from "./helpers/defaultCity";
 import currentLocation from "./helpers/currentLocation";
+import Forecast from "./components/Forecast";
 
 dotenv.config();
 
@@ -116,15 +117,14 @@ class App extends Component {
       })`,
       backgroundSize: "cover",
       backgroundRepeat: "no-repeat",
-      height: "100%"
+      height: "100%",
     };
 
-    console.log('our state', this.state);
     return (
       <div className="grid" style={styles}>
         {searching && <Loader />}
         <div className="left">
-          <div style={styles}>
+          <div >
             {!this.state.error && <Titles data={data} />}
           </div>
         </div>
@@ -143,7 +143,10 @@ class App extends Component {
           </div>
         </div>
       </div>
-    );
+    );  
+
+  // 404 error
+  
   }
 }
 export default App;

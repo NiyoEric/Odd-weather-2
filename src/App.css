@@ -49,10 +49,9 @@ body {
   margin-top: 350px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  max-width: 500px;
   grid-gap: 20px;
   padding: 40px;
-  position: absolute;
+  position: relative;
   bottom: 10%;
 }
 .degree-span-row-2{
@@ -236,14 +235,28 @@ body {
   font-size: 30px;
   margin: 20px 0px;
 }
-@media screen and (max-width: 425px) {
-  .right {
-    width: 100%;
-  }
-  .left {
-    display: none;
-  }
+
+.link-container {
+    margin: 10px;
 }
+
+.link {
+    text-decoration: none;
+    color: red;
+    background: white;
+    color: black;
+    padding: 14px 25px;
+    text-align: center;
+    display: inline-block;
+    border: 2px solid black;
+    border-radius: 25px;
+}
+
+.link:hover {
+    color: white;
+    background: transparent;
+}
+
 @media screen and (max-width: 768px) and (min-width: 425px) {
   .weather-detail-header {
     font-size: 20px;
@@ -290,3 +303,61 @@ body {
         font-size: 15px;
     }
 }
+@media screen and (max-width: 600px) {
+    .grid{
+      width: 100%;
+      height: auto;
+      flex-direction: column-reverse;
+      overflow: auto;
+    }
+    .right {
+        width: 100%;
+        height: auto;
+        min-height: 80%;
+    }
+    .left {
+        width: 100%;
+    }
+    .left h2{
+        font-size: 25px;
+    }
+    .left h3{
+        font-size: 35px;
+    }
+    #city{
+        font-size: 25px;
+    }
+    .search-form {
+        font-size: 15px;
+        height: 100%;
+        border-bottom: 2px solid white;
+        overflow: hidden;
+        width: 100%;
+    }
+    .weather-details {
+        width: 100%;
+    }
+    .weather-detail-header {
+        font-size: 20px;
+    }
+    .weather-detail-data p{
+        font-size: 15px;
+    }
+    .weather-detail-data {
+        margin: 10px;
+    }
+    .forecast-header h3 {
+        font-size: 20px;
+        text-align: center;
+    }
+    .day > div {
+        font-size: 15px;
+    }
+    .forecast {
+        width: 100%;
+        /* margin-left: 50px; */
+
+    }
+  }
+
+  
