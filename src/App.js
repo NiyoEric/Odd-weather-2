@@ -120,7 +120,7 @@ class App extends Component {
     };
 
     return (
-      <div className="grid">
+      <div className="grid" style={styles}>
         {searching && <Loader />}
         <div className="left">
           <div style={styles}>

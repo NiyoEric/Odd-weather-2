@@ -13,13 +13,14 @@ class Form extends Component {
         <form onSubmit={handleSubmit}>
           <input
             type="text"
+            required
+            pattern="[A-Za-z0-9]{1,}"
             placeholder="Type city name"
             value={city}
             onChange={handleChange}
+            
           />
-          <button onClick={handleSubmit}>
-            <img src={img} alt="searchbtn" />
-          </button>
+          <button type="submit"  ><img src={img} alt="searchbtn" /></button>
         </form>
         <div className="popular-searches">
           {result.map((item, index) => {
