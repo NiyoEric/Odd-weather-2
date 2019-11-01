@@ -4,11 +4,13 @@ import Convert from "../helpers/converters";
 class Forecast extends Component {
   render() {
     const { REACT_APP_ICON_URL: ICON_URL } = process.env;
-    const { forecast } = this.props;
+    const { forecast,city  } = this.props;
+    console.log(city);
+    
     return (
       <div className="forecast">
         <div className="forecast-header">
-          <h3>Five day weather forecast</h3>
+          <h3> {city.name}'s Five Day Weather Forecast</h3>
         </div>
         <div className="day">
           <div>Date</div>
